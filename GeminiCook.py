@@ -142,7 +142,7 @@ if st.session_state.active_tab == 'step1':
         if 'Gemini_api_key' not in st.session_state:
             st.session_state.Gemini_api_key = None
 
-    Gemini_url = 'https://platform.openai.com/account/api-keys'
+    Gemini_url = 'https://aistudio.google.com/app/apikey?hl=ko'
     st.session_state.Gemini_api_key = st.text_input('Gemini API KEY [Gemini API 사이트 바로가기](%s)' % Gemini_url, value=setting_list.get("Gemini_api_key", "")).strip()
 
     #
@@ -180,7 +180,7 @@ if st.session_state.active_tab == 'step1':
         key='2'
     )
 
-    st.subheader('이미지를 원하시는 경우 (선택) [Gemini API 사용방법](%s)'%'https://developers.google.com/custom-search/v1/introduction?apix=true&hl=ko')
+    st.subheader('이미지를 원하시는 경우 (선택) \n [Custom Search JSON API 사용방법](%s)'%'https://developers.google.com/custom-search/v1/introduction?apix=true&hl=ko')
     st.write()
     st.session_state.Google_SEARCH_ENGINE_ID = st.text_input('Google SEARCH ENGINE ID [Google SEARCH ENGINE ID 사이트 바로가기](%s)' % 'https://programmablesearchengine.google.com/controlpanel/all',
                                                              value=setting_list.get("Google_SEARCH_ENGINE_ID",
@@ -241,7 +241,7 @@ elif st.session_state.active_tab == 'step2':
 
                 img = response['items'][1]['pagemap']['cse_thumbnail'][0]['src']
             except:
-                img = 'test.png'
+                img = 'Noimg.png'
 
             col1.image(img, width=200)
             col2.subheader(title)
