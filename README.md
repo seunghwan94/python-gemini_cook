@@ -6,6 +6,10 @@
 'Gemini API 개발자 대회' 제출용
 ###
 
+### 프로그램 설명 영상
+https://youtu.be/FLRkyRzsFpE
+
+
 ## Code Clone
 ```
 git clone https://github.com/seunghwan94/GeminiCook.git
